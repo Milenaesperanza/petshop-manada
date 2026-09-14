@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { getProducts } from "../mock/products"
+import ItemList from "./ItemList"
 
 function ItemListContainer({ greeting }) {
   const [items, setItems] = useState([])
@@ -15,10 +16,10 @@ function ItemListContainer({ greeting }) {
   }, [])
 
   return (
-    <section>
+    <section className="item-list-container">
       <h1 style={{ textAlign: "center" }}>{greeting}</h1>
 
-      <p>Se cargaron {items.length} productos.</p>
+      <ItemList items={items} />
     </section>
   )
 }

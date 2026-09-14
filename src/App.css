@@ -71,3 +71,34 @@ h1 {
 .cat-icon {
   color: var(--terracota);
 }
+
+.item-list-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.item-list-container h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--terracota);
+  margin-bottom: 32px;
+}
+
+.item-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.item-card {
+  background-color: var(--blanco);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.item-image {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+}
