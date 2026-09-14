@@ -48,7 +48,7 @@ h1 {
   align-items: center;
   justify-content: center;
 
-  background-color: var(--mostaza);
+  background-color: var(--terracota);
   color: var(--marron);
 
   padding: 8px 14px;
@@ -56,4 +56,18 @@ h1 {
 
   font-weight: bold;
   white-space: nowrap;
+}
+
+.cart-icon {
+  color: var(--blanco);
+  font-size: 20px;
+}
+
+.dog-icon {
+  color: var(--terracota);
+
+}
+
+.cat-icon {
+  color: var(--terracota);
 }
