@@ -5,6 +5,55 @@ main {
 
 h1 {
   color: var(--terracota);
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 20px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 30px;
+  background-color: var(--marron);
+  color: var(--blanco);
+}
+
+.navbar-logo {
+  margin: 0;
+}
+
+.navbar-categories {
+  display: flex;
+  gap: 20px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-categories a {
+  color: var(--blanco);
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+}
+
+.navbar-categories a:hover {
+  background-color: var(--terracota);
+}
+
+.cart-widget {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--mostaza);
+  color: var(--marron);
+
+  padding: 8px 14px;
+  border-radius: 20px;
+
+  font-weight: bold;
+  white-space: nowrap;
 }

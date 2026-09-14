@@ -1,11 +1,14 @@
 import "./App.css"
+import Navbar from "./components/Navbar";
+import ItemListContainer from "./components/ItemListContainer";
 
 function App() {
   return (
-    <main>
-      <h1>PetShop Manada</h1>
-    </main>
-  )
+    <>
+      <Navbar/>
+      <ItemListContainer greeting="¡Bienvenidos a Pet Shop Manada!"/>
+    </>
+  );
 }
 
 export default App

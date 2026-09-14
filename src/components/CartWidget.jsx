@@ -1,5 +1,9 @@
 function CartWidget() {
-  return <span>🛒 <b>3</b></span>;
+  return (
+    <div className="cart-widget">
+      <span>🛒 <b>3</b></span>
+    </div>
+  )
 }
 
-export default CartWidget;
+export default CartWidget
