@@ -123,3 +123,20 @@ h1 {
   margin: 5px;
   padding: 8px 12px;
 }
+
+.brand,
+.brand:visited,
+.brand:hover,
+.brand:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand h1 {
+  margin: 0;
+  text-decoration: none;
+}
+
+.brand:hover {
+  opacity: 0.8;
+}

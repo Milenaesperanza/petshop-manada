@@ -1,19 +1,26 @@
-import { useEffect, useState } from "react"
-import { getProducts } from "../mock/products"
-import ItemList from "./ItemList"
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { getProducts } from "../mock/products";
+import ItemList from "./ItemList";
+
 
 function ItemListContainer({ greeting }) {
   const [items, setItems] = useState([])
+  const { id } = useParams()
 
   useEffect(() => {
     getProducts()
       .then((data) => {
-        setItems(data)
+        const productosFiltrados = id
+          ? data.filter((producto) => producto.category === id)
+          : data
+
+        setItems(productosFiltrados)
       })
       .catch((error) => {
         console.error("Error cargando productos", error)
       })
-  }, [])
+  }, [id])
 
   return (
     <section className="item-list-container">
