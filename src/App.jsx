@@ -1,16 +1,30 @@
 import "./App.css"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 
 function App() {
   return (
-    <>
-      <Navbar/>
-      <ItemListContainer greeting="¡Bienvenidos a Pet Shop Manada!"/>
-      <ItemDetailContainer />
-    </>
+    <BrowserRouter>
+
+      <Navbar />
+
+      <Routes>
+
+        <Route path="/" element={<ItemListContainer />} />
+
+        <Route path="/category/:id" element={<ItemListContainer />} />
+
+        <Route path="/item/:id" element={<ItemDetailContainer />} />
+
+        <Route path="*" element={<h2>Página no encontrada</h2>} />
+
+      </Routes>
+
+    </BrowserRouter>
   );
 }
 
-export default App
+export default App;
