@@ -99,3 +99,19 @@ export const getProducts = () => {
     }, 2000);
   });
 };
+
+export const getProductById = (productId) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const producto = products.find(
+        (product) => product.id === productId
+      );
+
+      if (producto) {
+        resolve(producto);
+      } else {
+        reject(new Error("Producto no encontrado"));
+      }
+    }, 500);
+  });
+};

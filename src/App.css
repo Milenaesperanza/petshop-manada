@@ -102,3 +102,24 @@ h1 {
   height: 220px;
   object-fit: contain;
 }
+
+.item-detail {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  align-items: flex-start;
+}
+
+.item-detail-image img {
+  width: 350px;
+  max-width: 100%;
+}
+
+.item-detail-info {
+  max-width: 500px;
+}
+
+.item-detail-info button {
+  margin: 5px;
+  padding: 8px 12px;
+}
