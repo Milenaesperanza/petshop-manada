@@ -3,14 +3,16 @@ import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 
 function CartWidget() {
-  const { totalitems } = useCart();
+  const { totalItems } = useCart();
 
   return (
-    <div className="cart-widget">
-      <span><BsCart4 className="cart-icon" />
-      <b>{totalitems}</b>
-      </span>
-    </div>
+    <Link to="/cart" className="cart-widget">
+      <div className="cart-widget">
+        <span><BsCart4 className="cart-icon" />
+        <b>{totalItems}</b>
+        </span>
+      </div>
+    </Link>
   );
 }
 

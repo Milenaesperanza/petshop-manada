@@ -1,6 +1,16 @@
+import { useCart } from "../context/CartContext";
 import ItemCount from "./ItemCount";
 
 function ItemDetail({ producto }) {
+  const { addItem } = useCart();
+
+  const handleAdd = (cantidad) => {
+    if (cantidad > 0) {
+      addItem(producto, cantidad);
+    }
+  };
+
+
   return (
     <section className="item-detail">
       <div className="item-detail-image">
@@ -14,7 +24,10 @@ function ItemDetail({ producto }) {
         <p>Stock disponible: {producto.stock}</p>
         <strong>${producto.price}</strong>
 
-        <ItemCount stock={producto.stock} />
+        <ItemCount
+          stock={producto.stock}
+          onAdd={handleAdd}
+        />
       </div>
     </section>
   );
